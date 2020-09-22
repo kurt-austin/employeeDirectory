@@ -43,7 +43,7 @@ function EmployeeDirectory() {
         //  const userName = apiReturn.find(item=>item.username.includes(`${search}`));
         url = BASEURL + foundName.id;
         searchEmpAgain(url);
-     
+
 
     }
 
@@ -52,57 +52,58 @@ function EmployeeDirectory() {
             .then(response => {
                 console.log(url)
                 setUser(response.data)
-            // console.log(response.data)
-        console.log(users)})
+                // console.log(response.data)
+                console.log(users)
+            })
             .catch(err => console.log(err))
-        
+
     }
 
-//    if (!foundName){
-return (
+    //    if (!foundName){
+    return (
 
 
 
-    <div className="container">
-        <Jumbotron />
-        
-        <p>
-            <input onChange={event => setSearch(event.target.value)} />
-            <button onClick={searchEmp}> Search</button>
-            {/* {user.map(usr => <User user={usr} />)}   */}
-         </p>
-        <Table /> 
-        
-    {users.map(usr => <User user={usr} />)}   
+        <div className="container">
+            <Jumbotron />
+
+            <p>
+                <input onChange={event => setSearch(event.target.value)} />
+                <button onClick={searchEmp}> Search</button>
+                {/* {user.map(usr => <User user={usr} />)}   */}
+            </p>
+            <Table />
+
+            {users.map(usr => <User user={usr} />)}
 
 
-    </div>
+        </div>
 
-)
-// } else{
-// return (
+    )
+    // } else{
+    // return (
 
-// <div className="container">
-//         <Jumbotron />
-        
-//         <p>
-//             <input onChange={event => setSearch(event.target.value)} />
-//             <button onClick={searchEmp}> Search</button>
-//             {/* {user.map(usr => <User user={usr} />)}   */}
-//         </p>
-//         <Table />
-//         {user.map(usr => <User user={usr} />)}
-//     {/* {users.map(usr => <User user={usr} />)}    */}
+    // <div className="container">
+    //         <Jumbotron />
+
+    //         <p>
+    //             <input onChange={event => setSearch(event.target.value)} />
+    //             <button onClick={searchEmp}> Search</button>
+    //             {/* {user.map(usr => <User user={usr} />)}   */}
+    //         </p>
+    //         <Table />
+    //         {user.map(usr => <User user={usr} />)}
+    //     {/* {users.map(usr => <User user={usr} />)}    */}
 
 
-//     </div>
+    //     </div>
 
-// )
+    // )
 
 
 
 }
 
-}
+
 
 export default EmployeeDirectory;
