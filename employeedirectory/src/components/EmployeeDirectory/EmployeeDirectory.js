@@ -51,7 +51,7 @@ function EmployeeDirectory() {
         API2.search(url)
             .then(response => {
                 console.log(url)
-                setUser(response.data)
+                setUsers(response.data)
                 // console.log(response.data)
                 console.log(users)
             })
