@@ -58,7 +58,7 @@ function EmployeeDirectory() {
             .catch(err => console.log(err))
 
     }
-
+    // console.log
     //    if (!foundName){
     return (
 
@@ -72,9 +72,9 @@ function EmployeeDirectory() {
                 <button onClick={searchEmp}> Search</button>
                 {/* {user.map(usr => <User user={usr} />)}   */}
             </p>
-            <Table />
+            <Table users={users}/>
 
-            {users.map(usr => <User user={usr} />)}
+            {/* {users.map(usr => <User user={usr} />)} */}
 
 
         </div>

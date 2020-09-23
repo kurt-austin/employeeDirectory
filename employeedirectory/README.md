@@ -1,3 +1,50 @@
+# budgetTracker
+
+## Description 
+  This is a Budget Tracker is a PWA (Progressive Web App) that allows the user to enter deposits and expenses in a budget on or offline.  If offline, the entries are stored and once back online syncs up with the database.  This full-stack app that uses HTML, CSS, JavaScript, Express, MongoDb/Mongoose, indexDB, ChartJS, and Web Manifiest and Service Workers for offline use.
+
+  ## Table of Contents
+  [1.  Installation](##Installation) 
+
+  [2.  Instructions](##Instructions)
+
+  [3.  App](##App)
+  
+  [4.  Questions](##Questions)
+
+## Installation
+
+  1.    This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Instructions
+
+  1.    In the project directory, you can run:
+        ### `npm start`.  This runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+  2.    Make sure the packages per the Package.json are installed in your project directory.
+  
+  3.    Start your server using `node server`.  If you are using the PWA, please have that installed first prior to going offline.  Any entries made will be synced up after going back online.
+  
+
+## App 
+
+  ![Budget Tracker](./public/budgetracker.png)
+
+## Questions
+
+  [Github Repository](https://github.com/kurt-austin/budgetTracker)
+
+  [Heroku Repository](https://git.heroku.com/pacific-cove-73988.git)
+
+  [Budget Tracker Deployed App](https://pacific-cove-73988.herokuapp.com/)
+
+  [Contact](kurt.austin@gmail.com)
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
