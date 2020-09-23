@@ -41,9 +41,9 @@
 
 ## Questions
 
-  [Github Repository](https://github.com/kurt-austin/employeeTracker)
+  [Github Repository](https://github.com/kurt-austin/employeeDirectory)
 
-  [Employee Directory Deployed App](https://pacific-cove-73988.herokuapp.com/)
+  [Employee Directory Deployed App](https://kurt-austin.github.io/employeeDirectory/)
 
   [Contact](kurt.austin@gmail.com)
 
