@@ -2,19 +2,13 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Jumbotron from "../Jumbotron/Jumbotron.js";
 import API from "../../utils/API";
-import API2 from "../../utils/API2";
-import User from "../Table/User";
 import Table from "../Table/Table";
-let foundName;
-let apiReturn;
-let url;
 
 const BASEURL = "https://jsonplaceholder.typicode.com/users/";
 
 
 function EmployeeDirectory() {
     const [users, setUsers] = useState([])
-    // const [user, setUser] = useState(null)
     const [search, setSearch] = useState([])
 
     useEffect(() => {
@@ -30,37 +24,17 @@ function EmployeeDirectory() {
 
 
 
-    const searchEmp = async () => {
+    const searchEmp =  () => {
 
-        await API.search(BASEURL)
-            .then(res => apiReturn = res.data)
-            .catch(err => console.log(err));
-
-        //    console.log(`${search}`)
-        //    console.log(apiReturn)
-        foundName = apiReturn.find(item => item.name.includes(`${search}`));
-        //  const foundEmail = apiReturn.find(item=> item.email.includes(`${search}`));
-        //  const userName = apiReturn.find(item=>item.username.includes(`${search}`));
-        url = BASEURL + foundName.id;
-        searchEmpAgain(url);
-
-
-    }
-
-    function searchEmpAgain(url) {
-        API2.search(url)
-            .then(response => {
-                console.log(url)
-                setUsers(response.data)
-                // console.log(response.data)
-                console.log(users)
-            })
+         API.search(BASEURL)
+            .then(res => setUsers(users.filter(users => users.name.includes(`${search}`))))
             .catch(err => console.log(err))
+      
+        
 
     }
-    // console.log
-    //    if (!foundName){
-    return (
+
+        return (
 
 
 
@@ -70,36 +44,16 @@ function EmployeeDirectory() {
             <p>
                 <input onChange={event => setSearch(event.target.value)} />
                 <button onClick={searchEmp}> Search</button>
-                {/* {user.map(usr => <User user={usr} />)}   */}
+                <button onClick={searchAllEmp}> Reset Search</button>    
             </p>
             <Table users={users}/>
-
-            {/* {users.map(usr => <User user={usr} />)} */}
+          
 
 
         </div>
 
     )
-    // } else{
-    // return (
-
-    // <div className="container">
-    //         <Jumbotron />
-
-    //         <p>
-    //             <input onChange={event => setSearch(event.target.value)} />
-    //             <button onClick={searchEmp}> Search</button>
-    //             {/* {user.map(usr => <User user={usr} />)}   */}
-    //         </p>
-    //         <Table />
-    //         {user.map(usr => <User user={usr} />)}
-    //     {/* {users.map(usr => <User user={usr} />)}    */}
-
-
-    //     </div>
-
-    // )
-
+    
 
 
 }
